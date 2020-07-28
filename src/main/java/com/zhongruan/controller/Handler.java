@@ -11,11 +11,11 @@ import java.util.List;
 @Controller
 public class Handler {
 
-    /*@GetMapping("/index")
+    @GetMapping("/index01")
     public String index() {
         System.out.println("执行了index方法");
         return "index";
-    }*/
+    }
 
     @GetMapping("/index")
     public String index(Model model) {
