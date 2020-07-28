@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    <h1>
+        HelloWorld!!!!!
+    </h1>
+
+    <table>
+        <tr>
+            <th>用户ID</th>
+            <th>用户姓名</th>
+            <th>用户年龄</th>
+        </tr>
+
+        <tr th:each="user : ${list}">
+            <td th:text="${user.id}">2</td>
+<!--            <td th:text="'用户名是'+${user.username}+'===='">李四</td>-->
+            <td th:text="|用户名是, ${user.username}|">李四</td>
+            <td th:text="${user.age}">20</td>
+        </tr>
+    </table>
+</body>
+</html>
